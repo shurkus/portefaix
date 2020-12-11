@@ -1,10 +1,9 @@
----
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: HelmRepository
 metadata:
   name: pomerium
   namespace: flux-system
 spec:
-  interval: 10m0s
-  url: https://helm.pomerium.io
+  interval: 24h
+  url: https://helm.pomerium.io/
   timeout: 3m
