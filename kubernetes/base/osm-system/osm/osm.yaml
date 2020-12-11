@@ -14,7 +14,7 @@ spec:
         kind: HelmRepository
         name: osm
         namespace: flux-system
-      version: 0.5.0
+      version: 0.6.0-rc.1
   releaseName: osm
   targetNamespace: osm-system
   test:
@@ -33,7 +33,8 @@ spec:
   timeout: 10m 
   values:
     OpenServiceMesh:
-      enablePrometheus: false
-      enableGrafana: false
+      deployPrometheus: false
+      enablePrometheusScraping: true
+      deployGrafana: false
       enableFluentbit: false
       deployJaeger: false
