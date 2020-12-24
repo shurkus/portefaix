@@ -1,0 +1,22 @@
+---
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentity
+metadata:
+  annotations:
+    # recommended to use namespaced identites https://azure.github.io/aad-pod-identity/docs/configure/match_pods_in_namespace/
+    aadpodidentity.k8s.io/Behavior: namespaced 
+  name: flux-identity
+  namespace: flux-system
+spec:
+  type: 0 # MSI
+  resourceID: /subscriptions/b7ff400c-0b01-4a49-af59-f179d610026a/resourcegroups/portefaix-dev-sops/providers/Microsoft.ManagedIdentity/userAssignedIdentities/portefaix-dev-sops
+  clientID: be1ef42f-19d4-4e7e-9589-c23428509e31
+---
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentityBinding
+metadata:
+  name: flux-id-binding
+  namespace: flux-system
+spec:
+  azureIdentity: flux-identity
+  selector: flux-sops-aad

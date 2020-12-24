@@ -1,0 +1,14 @@
+---
+apiVersion: builtin
+kind: LabelTransformer
+metadata:
+  name: labelTransformer
+labels:
+  aadpodidbinding: flux-sops-aad
+fieldSpecs:
+# - path: metadata/labels
+#   create: true
+- kind: Deployment
+  path: spec/template/metadata/labels
+  create: true
+# - kind: Secret

@@ -12,17 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#output "user_assigned_identity_id" {
-#  value       = azurerm_user_assigned_identity.sops.id
-#  description = "ID of the user assigned identity"
-#}
+output "identity_client_id" {
+ value       = azurerm_user_assigned_identity.sops.client_id
+ description = "Client ID of the user assigned identity"
+}
 
-#output "user_assigned_identity_name" {
-#  value       = azurerm_user_assigned_identity.sops.name
-#  description = "Name of the user assigned identity"
-#}
+output "identity_resource_id" {
+ value       = azurerm_user_assigned_identity.sops.id
+ description = "ID of the user assigned identity"
+}
 
-#output "sops_key_id" {
-#  value       = azurerm_key_vault_key.sops.id
-#  description = "Sops key ID"
-#}
+output "sops_key_id" {
+  value       = azurerm_key_vault_key.sops.id
+  description = "Sops key ID"
+}
