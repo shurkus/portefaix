@@ -15,12 +15,12 @@
 ############################################################################
 # Provider
 
-variable resource_group_name {
+variable "resource_group_name" {
   description = "Name of the resource group to be imported."
   type        = string
 }
 
-variable subscription_id {
+variable "subscription_id" {
   type        = string
   description = "The Subscription ID which should be used"
 }
@@ -28,16 +28,23 @@ variable subscription_id {
 #############################################################################
 # Networking
 
-variable subnet_name {
+variable "subnet_name" {
   type        = string
   description = "Name of the Subnet"
 }
 
-variable virtual_network_name {
+variable "virtual_network_name" {
   type        = string
   description = "Name of the Virtual Network this Subnet is located within"
 }
 
+#############################################################################
+# Active Directory
+
+variable "aad_group_name" {
+  description = "Name of the Azure AD group for cluster-admin access"
+  type        = string
+}
 
 #############################################################################
 # Kubernetes cluster

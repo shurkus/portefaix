@@ -24,6 +24,11 @@ virtual_network_name = "portefaix-dev"
 subnet_name = "portefaix-dev-aks-nodes"
 
 #############################################################################
+# Active Directory
+
+aad_group_name = "portefaix-dev-aks"
+
+#############################################################################
 # AKS
 
 cluster_name = "portefaix-dev-aks"
