@@ -20,5 +20,7 @@ AZ_LOCATION_dev = francecentral
 
 CLUSTER_dev = portefaix-dev-aks
 
+KUBE_CONTEXT_dev = portefaix-dev-aks-admin
+
 SOPS_PROVIDER_dev = azure-kv
 SOPS_KEY_dev = https://portefaix-dev-sops-tmp.vault.azure.net/keys/portefaix-dev-sops-tmp/d4da1ad6b9cf474095774d06871c5c1b
